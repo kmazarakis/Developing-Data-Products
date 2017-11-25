@@ -19,13 +19,16 @@ shinyUI(fluidPage(
             submitButton("Submit")
         ),
         mainPanel(
+                h6("The Application allows the user to specify the size of the flower's Sepal and Petal by using sliders.
+                    Then, by using the Submit button, there is a decision tree algorithm that runs in the background to predict the species of the flower.
+                   There are also 4 plots showing the distribution of the sizes and the currently selected size of each feature."),
                 splitLayout(cellWidths = c("50%","50%"),
-                            plotOutput("plot1", height = "250px"),
-                            plotOutput("plot2", height = "250px")),
+                            plotOutput("plot1", height = "220px"),
+                            plotOutput("plot2", height = "220px")),
             
                 splitLayout(cellWidths = c("50%","50%"),
-                            plotOutput("plot3", height = "250px"),
-                            plotOutput("plot4", height = "250px")),
+                            plotOutput("plot3", height = "220px"),
+                            plotOutput("plot4", height = "220px")),
             h3("Table of Predicted Species with Probabilities:"),
             tableOutput("pred")
             
